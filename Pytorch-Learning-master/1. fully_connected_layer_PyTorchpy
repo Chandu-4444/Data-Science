@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 28 16:25:14 2021
+
+@author: luna
+"""
+import torch
+
+X = torch.arange(50, dtype=torch.float).view(10, 5)
+print(X)
+
+fc_layer = torch.nn.Linear(in_features=5, out_features=3)
+
+print(fc_layer.weight)
+print(fc_layer.bias)
+
+A = fc_layer(X)
+
+print(A.size())
